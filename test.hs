@@ -1,4 +1,3 @@
-import System.Win32 (xBUTTON1)
 -- EJERCICIO 1a --
 longitud :: [a] -> Integer --dada una lista, devuelve su cantidad de elementos
 longitud [] = 0
