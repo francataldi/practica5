@@ -225,10 +225,11 @@ pares (x:xs) | mod x 2 == 0 = x : pares xs
 -- pares [1,2,3,6,8,4,12] = [2,6,8,4,12]
 
 -- EJERCICIO 3h --
-multiplosDeN :: Integer -> [Integer] -> [Integer]  -- pedir ayuda porque no me devuelve x como multiplo de si mismo
+multiplosDeN :: Integer -> [Integer] -> [Integer]  
 multiplosDeN x [] = []
 multiplosDeN x (y:ys) | mod y x == 0 = y : multiplosDeN x ys
-                      | otherwise    = quitar x (multiplosDeN x ys)
+                      | otherwise    = pasoRecursivo
+                      where pasoRecursivo = multiplosDeN x ys
 
 -- ejemplo:
 -- multiplosDeN 4 [1,2,3,4,5,6,7,8] = [4,8]
